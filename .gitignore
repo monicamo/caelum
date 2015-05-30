@@ -41,3 +41,19 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+jee/.metadata/.lock
+jee/.metadata/.log
+jee/.metadata/.log
+jee/RemoteSystemsTempFiles/.project
+jee/livraria-pacote.ear
+jee/jpa-standalone/lib/mysql-connector-java-5.1.35-bin.jar
+jee/jpa-standalone/bin/br/com/ae/loja/jpa/TestaDeCriacaoDeTabelas.class
+*.class
+*.classpath
+*.project
+jee/fj31-livraria/livraria-ejb3.jar
+.settings/
+.metadata/
+jee/fj31-livraria-cliente/livraria-base.jar
+jee/fj31-livraria/livraria-pacote.ear
+jee/fj31-livraria/livraria-base.jar
