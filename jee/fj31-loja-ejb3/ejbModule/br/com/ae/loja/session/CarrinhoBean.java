@@ -71,7 +71,4 @@ public class CarrinhoBean implements Carrinho {
 	public void passivando() {
 		System.out.println("Passivando " + this);
 	}
-	
-	
-	
 }
