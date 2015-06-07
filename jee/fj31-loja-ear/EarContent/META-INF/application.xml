@@ -5,6 +5,12 @@
     <ejb>fj31-loja-ejb3.jar</ejb>
   </module>
   <module>
-  	<java>lib/fj31-loja-base.jar</java>
+    <java>lib/fj31-loja-base.jar</java>
+  </module>
+  <module>
+    <web>
+      <web-uri>fj31-loja-web.war</web-uri>
+      <context-root>fj31-loja-web</context-root>
+    </web>
   </module>
 </application>

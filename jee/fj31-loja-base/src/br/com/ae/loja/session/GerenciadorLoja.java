@@ -18,5 +18,5 @@ public interface GerenciadorLoja {
 	List<Autor> buscaAutorPeloNome(String nome);
 	List<Livro> buscaLivroPaginacao(String nome, int primeira, int maxima);
 	List<Livro> buscaLivroPeloNomeEPreco(String nomeDoLivro, double precoDoLivro);
- 
+	List<Livro> listaLivros();
 }

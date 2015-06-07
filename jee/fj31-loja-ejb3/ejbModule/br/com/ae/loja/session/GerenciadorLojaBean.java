@@ -155,6 +155,12 @@ public class GerenciadorLojaBean implements GerenciadorLoja {
 		q.setParameter("preco", precoDoLivro);
 		return q.getResultList();
 	}
+
+
+	@Override
+	public List<Livro> listaLivros() {
+		return this.manager.createQuery("select livro from Livro as livro").getResultList();
+	}
 	
 }
 
