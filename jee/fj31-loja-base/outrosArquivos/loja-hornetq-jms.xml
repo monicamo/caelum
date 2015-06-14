@@ -1,0 +1,13 @@
+<configuration xmlns="urn:hornetq"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="urn:hornetq /schema/hornetq-jms.xsd">
+
+   <queue name="loja-fila">
+      <entry name="/queue/loja-fila"/>
+   </queue>
+   
+   <topic name="loja-topico">
+      <entry name="/topico/loja-topico"/>
+   </topic>
+
+</configuration>
