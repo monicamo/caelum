@@ -15,10 +15,12 @@ import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.xml.bind.annotation.XmlRootElement;
 
 import br.com.ae.loja.entity.listener.LivroListener;
 
 @Entity
+@XmlRootElement
 @EntityListeners(LivroListener.class)
 public class Livro implements Serializable {
 

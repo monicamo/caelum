@@ -23,7 +23,7 @@
   
   	<web-resource-collection>
   		<web-resource-name>Segurança no JBOSS</web-resource-name>
-		<url-pattern>/*</url-pattern>
+		<url-pattern>/list.jsp</url-pattern>
   	</web-resource-collection>
   	<auth-constraint>
   		<role-name>administrador</role-name>

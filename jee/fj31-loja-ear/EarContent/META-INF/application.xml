@@ -13,4 +13,10 @@
       <context-root>fj31-loja-web</context-root>
     </web>
   </module>
+  <module>
+    <web>
+      <web-uri>fj31-loja-rest.war</web-uri>
+      <context-root>fj31-loja-rest</context-root>
+    </web>
+  </module>
 </application>
