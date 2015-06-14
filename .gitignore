@@ -57,3 +57,4 @@ jee/fj31-livraria/livraria-ejb3.jar
 jee/fj31-livraria-cliente/livraria-base.jar
 jee/fj31-livraria/livraria-pacote.ear
 jee/fj31-livraria/livraria-base.jar
+jee/fj31-loja-client/build/classes/jboss-ejb-client.properties
