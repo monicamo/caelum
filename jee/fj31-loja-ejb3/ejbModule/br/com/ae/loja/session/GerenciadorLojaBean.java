@@ -17,11 +17,13 @@ import org.jboss.security.annotation.SecurityDomain;
 import br.com.ae.loja.entity.Autor;
 import br.com.ae.loja.entity.Livro;
 import br.com.ae.loja.interceptor.AuditoriaInterceptor;
+import br.com.ae.loja.interceptor.AutorizacaoInterceptor;
 
 @Stateless
 @Remote(GerenciadorLoja.class)
-@Interceptors(AuditoriaInterceptor.class)
-@SecurityDomain("Livraria")
+@Interceptors({AuditoriaInterceptor.class, AutorizacaoInterceptor.class})
+@SecurityDomain("livraria")
+@RolesAllowed({"cliente"})
 public class GerenciadorLojaBean implements GerenciadorLoja {
 
 	private Map<String, Livro> repositorio;
