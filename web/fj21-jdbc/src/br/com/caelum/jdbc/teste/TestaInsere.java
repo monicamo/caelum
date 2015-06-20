@@ -11,8 +11,8 @@ public class TestaInsere {
 		
 		Contato contato = new Contato();
 		
-		contato.setNome("Lara De La Cruz");
-		contato.setEmail("lara@teste.com");
+		contato.setNome("Teste2 Viki");
+		contato.setEmail("tesst@teste.com");
 		contato.setEndereco("Rua da Romenia 123");
 		contato.setDataNascimento(Calendar.getInstance());
 		

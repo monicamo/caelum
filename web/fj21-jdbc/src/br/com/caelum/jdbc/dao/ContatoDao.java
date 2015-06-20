@@ -128,7 +128,7 @@ public class ContatoDao {
 	
 	public void altera(Contato contato) {
 		
-		String sql = "update contatos set ~"
+		String sql = "update contatos set "
 				+ " nome=?, email=?, endereco=?, dataNascimento=? "
 				+ " where id=?";
 		
@@ -149,8 +149,25 @@ public class ContatoDao {
 		{
 			throw new DAOException();
 		}
-		
-		
 	}
 
+	public void remove(Contato contato) {
+		
+		try {
+			
+			PreparedStatement stmt = connection.prepareStatement("delete from contatos where id=?");
+			
+			stmt.setLong(1, contato.getId());
+			
+			stmt.execute();
+			
+			stmt.close();
+			
+		} catch (Exception e) {
+
+			throw new DAOException();
+		}
+		
+	}
+	
 }
