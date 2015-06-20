@@ -54,7 +54,7 @@ public class ContatoDao {
 			List<Contato> contatos = new ArrayList<Contato>();
 
 			PreparedStatement stmt = this.connection
-					.prepareStatement("select * from contatos where nome like 'L%'");
+					.prepareStatement("select * from contatos");
 
 			ResultSet rs = stmt.executeQuery();
 
