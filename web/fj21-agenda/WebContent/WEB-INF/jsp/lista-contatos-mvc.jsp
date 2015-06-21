@@ -6,23 +6,19 @@
 <html>
 <body>
 
-<c:import url="cabecalho.jsp"></c:import>
-
+<c:import url="cabecalho-mvc.jsp"></c:import>
 
 <!-- cria o DAO -->
 <jsp:useBean id="dao" class="br.com.caelum.jdbc.dao.ContatoDao" />
 
- 
-
 <table>
-			<tr>
-				<td>Id</td>
-				<td>Nome</td>
-				<td>Email</td>
-				<td>Endereço</td>
-				<td>Data de nascimento</td>
-			</tr>
-
+	<tr>
+		<td>Id</td>
+		<td>Nome</td>
+		<td>Email</td>
+		<td>Endereço</td>
+		<td>Data de nascimento</td>
+	</tr>
 	<c:forEach var="contato" items="${contatos}" varStatus="id">
 		<tr bgcolor="#${id.count % 2 == 0 ? 'aaee88' : 'ffffff' }">
 		<td>${id.count}</td>
@@ -49,6 +45,9 @@
 			<fmt:formatDate value="${contato.dataNascimento.time}" pattern="dd/MM/yyyy" />
 		</td>
 		<td>
+			<a href="mvc?logica=AlteraContatoLogic&id=${contato.id}">Alterar</a>
+		</td>
+		<td>
 			<a href="mvc?logica=RemoveContatoLogic&id=${contato.id}">Remover</a>
 		</td>
 		
@@ -57,7 +56,7 @@
 </table>
 
 
-<c:import url="rodape.jsp"></c:import>
+<c:import url="rodape-mvc.jsp"></c:import>
 
 </body>
 </html>

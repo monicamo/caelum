@@ -7,17 +7,17 @@
 		<script src="js/jquery-ui.js"></script>
 	</head>
 <body>
-	<c:import url="cabecalho.jsp" />
+	<c:import url="cabecalho-mvc.jsp" />
 	<h1>Adiciona Contatos</h1>
 	<hr />
-	<form action="adicionaContato">
-	
-		Nome: <input type="text" name="nome" /><br /> 
-		E-mail: <input type="text" name="email" /><br /> 
-		Endereço: <input type="text" name="endereco" /><br /> 
+	<form action="mvc?logica=AdicionaContatoLogic" method="post">
+		  <input type="hidden" name="id" value="${contato.id}" /> 
+		Nome: <input type="text" name="nome" value="${contato.nome}" /><br /> 
+		E-mail: <input type="text" name="email" value="${contato.email}" /><br /> 
+		Endereço: <input type="text" name="endereco" value="${contato.endereco}"  /><br /> 
 		Data Nascimento: <caelum:campoData id="dataNascimento" /><br />
 		<input type="submit" value="Gravar" />
 	</form>
-	<c:import url="rodape.jsp" />
+	<c:import url="rodape-mvc.jsp" />
 </body>
 </html>

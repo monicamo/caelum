@@ -21,6 +21,9 @@ public class ContatoDao {
 		this.connection = new ConnectionFactory().getConnection();
 	}
 	
+	public ContatoDao(Connection connection) {
+		this.connection = connection;
+	}
 
 	public void adiciona(Contato contato) {
 
@@ -87,7 +90,7 @@ public class ContatoDao {
 		}
 	}
 
-	public Contato pesquisar(int id) {
+	public Contato pesquisar(Long id) {
 
 		try {
 
@@ -139,9 +142,12 @@ public class ContatoDao {
 			
 			stmt.setString(1, contato.getNome());
 			stmt.setString(2, contato.getEmail());
-			stmt.setString(3, contato.getEndereco());
+			stmt.setString(3, contato.getEndereco());	
 			stmt.setDate(4, new Date(contato.getDataNascimento().getTimeInMillis()));
 			stmt.setLong(5, contato.getId());
+			
+			System.out.println("altera dados " + contato);
+			
 			stmt.execute();
 			stmt.close();
 			
