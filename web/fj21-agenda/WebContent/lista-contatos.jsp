@@ -57,7 +57,7 @@
 </table>
 
 
-<c:import url="rodape.jsp"></c:import>
+<c:import url="rodape.jsp" />
 
 </body>
 </html>
