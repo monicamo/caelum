@@ -18,8 +18,9 @@
 			Finalizado? <input type="checkbox" name="finalizado" value="true" ${tarefa.finalizado? 'checked' : '' }/> <br />
 			
 			Data de finalização: <br />
-			<!--  input type="text" name="dataFinalizacao" value="<fmt:formatDate value="${tarefa.dataFinalizacao.time}"  pattern="dd/MM/yyyy"  />" / -->
-			<caelum:campoData id="dataFinalizacao" /><br />
+			<!-- value="<fmt:formatDate value="${tarefa.dataFinalizacao.time}"  pattern="dd/MM/yyyy"  />"   -->
+		 
+			<caelum:campoData id="dataFinalizacao" />
 			<br />
 			<input type="submit" value="Alterar"/>
 		</form>

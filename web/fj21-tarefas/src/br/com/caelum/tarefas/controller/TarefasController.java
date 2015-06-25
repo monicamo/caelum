@@ -1,5 +1,9 @@
 package br.com.caelum.tarefas.controller;
 
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
@@ -15,9 +19,12 @@ import br.com.caelum.tarefas.modelo.Tarefa;
 public class TarefasController 
 {
 	@RequestMapping("finalizaTarefa")
-	public void finaliza(Long id, HttpServletResponse response) {
+	public void finaliza(Long id, HttpServletResponse response) throws IOException {
 		JdbcTarefaDao dao = new JdbcTarefaDao();
 		dao.finaliza(id);
+		Date dataDeFinalizacao = dao.buscaPorId(id).getDataFinalizacao().getTime();
+		String data = new SimpleDateFormat("dd/MM/yyyy").format(dataDeFinalizacao);
+		response.getWriter().write(data);
 		response.setStatus(200);
 	}
 	
@@ -45,7 +52,8 @@ public class TarefasController
 	}
 	
 	@RequestMapping("listaTarefas")
-	public String lista(Model model) {
+	public String lista(Model model)
+	{
 		JdbcTarefaDao dao = new JdbcTarefaDao();
 		model.addAttribute("tarefas", dao.lista());
 		return "tarefa/lista";
