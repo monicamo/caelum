@@ -1,16 +1,14 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <html>
-
-	<body>
-	
+	<body>	
 	<script type="text/javascript">
-	
 		function finalizaAgora(id) {
-			$.post("finalizaTarefa", {'id' : id}, function() {
+			$.post("finalizaTarefa", {'id' : id}, function(resposta) {
 				// selecionando o elemento html através da
 				// ID e alterando o HTML dele
-				$("#finalizaTarefa_"+id).html("Finalizado");
+				//$("#finalizaTarefa_"+id).html("Finalizado");
+				$("#tarefa_"+id).html(resposta);
 			});
 		}
 	
@@ -22,11 +20,9 @@
 			});
 		}
 	</script>	
-	
 		<c:import url="inc/cabecalho.jsp" />
 		<a href="novaTarefa">Criar nova tarefa</a>
 		<br /> <br />
-
 		<table>
 			<tr>
 				<th>Id</th>
@@ -35,19 +31,20 @@
 				<th>Data de finalização</th>
 			</tr>
 			<c:forEach items="${tarefas}" var="tarefa">
-				<tr>
+				<tr id="tarefa_${tarefa.id}">
 					<td>${tarefa.id}</td>
 					<td>${tarefa.descricao}</td>
 					<c:if test="${tarefa.finalizado eq false}">
-						<td id="finalizaTarefa_${tarefa.id}">
+						<!--  id="finalizaTarefa_${tarefa.id}" -->
+						<td>
 						<a href="#" onClick="finalizaAgora(${tarefa.id})">Não Finalizado</a>
 					</td>
 					</c:if>
 					<c:if test="${tarefa.finalizado eq true}">
-						<td id="finalizaTarefa_${tarefa.id}">Finalizada</td>
+					<td>Finalizado </td>
 					</c:if>
 					<td><fmt:formatDate value="${tarefa.dataFinalizacao.time}" 
-						pattern="dd/MM/yyyy"/>
+						pattern="dd/MM/yyyy"/> 
 					</td>
 					<td><a href="mostraTarefa?id=${tarefa.id}">Alterar</a></td>
 					<td>

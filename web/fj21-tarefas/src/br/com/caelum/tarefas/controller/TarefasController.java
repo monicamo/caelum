@@ -19,13 +19,17 @@ import br.com.caelum.tarefas.modelo.Tarefa;
 public class TarefasController 
 {
 	@RequestMapping("finalizaTarefa")
-	public void finaliza(Long id, HttpServletResponse response) throws IOException {
+	public String finaliza(Long id, Model model) throws IOException {
 		JdbcTarefaDao dao = new JdbcTarefaDao();
 		dao.finaliza(id);
-		Date dataDeFinalizacao = dao.buscaPorId(id).getDataFinalizacao().getTime();
-		String data = new SimpleDateFormat("dd/MM/yyyy").format(dataDeFinalizacao);
-		response.getWriter().write(data);
-		response.setStatus(200);
+	
+		//Date dataDeFinalizacao = dao.buscaPorId(id).getDataFinalizacao().getTime();
+		//String data = new SimpleDateFormat("dd/MM/yyyy").format(dataDeFinalizacao);
+		//response.getWriter().write(data);
+		//response.setStatus(200);
+	
+		model.addAttribute("tarefa", dao.buscaPorId(id));
+		return "tarefa/finalizada";
 	}
 	
 	@RequestMapping("alteraTarefa")
