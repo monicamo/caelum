@@ -15,6 +15,10 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<mvc:default-servlet-handler/>
 
+	<mvc:interceptors>
+		<bean class="br.com.caelum.tarefas.interceptor.AutorizadorInterceptor" />
+	</mvc:interceptors>
+
 	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
 		<property name="basename" value="/WEB-INF/messages" />
 	</bean>
