@@ -2,6 +2,7 @@
 
 <head>
 	<link href="resources/css/jquery.css" rel="stylesheet">
+	<link type="text/css" href="resources/css/tarefas.css" rel="stylesheet" />
 	<script type="text/javascript" src="resources/js/jquery.js"></script>
 	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>	
 	<script>
