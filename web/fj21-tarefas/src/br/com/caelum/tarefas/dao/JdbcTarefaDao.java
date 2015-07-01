@@ -14,7 +14,6 @@ import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import br.com.caelum.tarefas.ConnectionFactory;
 import br.com.caelum.tarefas.modelo.Tarefa;
 
 @Repository
