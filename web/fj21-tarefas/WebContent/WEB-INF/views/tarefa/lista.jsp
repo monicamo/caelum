@@ -36,15 +36,15 @@
 					<td>${tarefa.descricao}</td>
 					<c:if test="${tarefa.finalizado eq false}">
 						<!--  id="finalizaTarefa_${tarefa.id}" -->
-						<td>
-						<a href="#" onClick="finalizaAgora(${tarefa.id})">Não Finalizado</a>
+						<td id="tarefa_${tarefa.id}">
+						<a href="#" onClick="finalizaAgora(${tarefa.id})">Finaliza agora!</a>
 					</td>
 					</c:if>
 					<c:if test="${tarefa.finalizado eq true}">
 					<td>Finalizado </td>
 					</c:if>
-					<td><fmt:formatDate value="${tarefa.dataFinalizacao.time}" 
-						pattern="dd/MM/yyyy"/> 
+					<td id="tarefa_data_${tarefa.id}">
+					<fmt:formatDate value="${tarefa.dataFinalizacao.time}" pattern="dd/MM/yyyy"/> 
 					</td>
 					<td><a href="mostraTarefa?id=${tarefa.id}">Alterar</a></td>
 					<td>
