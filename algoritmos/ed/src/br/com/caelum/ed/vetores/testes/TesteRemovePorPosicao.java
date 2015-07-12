@@ -1,6 +1,6 @@
 package br.com.caelum.ed.vetores.testes;
 
-import br.com.caelum.ed.vetores.Vetor;
+import br.com.caelum.ed.vetores.Vector;
 import br.com.mv.ed.Aluno;
 
 public class TesteRemovePorPosicao {
@@ -13,7 +13,7 @@ public class TesteRemovePorPosicao {
 		a1.setNome("Rafael");
 		a2.setNome("Paulo");
 		
-		Vetor lista = new Vetor();
+		Vector lista = new Vector();
 		
 		lista.adiciona(a1);
 		lista.adiciona(a2);

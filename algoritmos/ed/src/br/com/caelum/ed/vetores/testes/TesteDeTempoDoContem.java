@@ -1,13 +1,13 @@
 package br.com.caelum.ed.vetores.testes;
 
-import br.com.caelum.ed.vetores.Vetor;
+import br.com.caelum.ed.vetores.Vector;
 import br.com.mv.ed.Aluno;
 
 public class TesteDeTempoDoContem {
 	
 	public static void main(String[] args) {
 
-		Vetor vetor = new Vetor();
+		Vector vetor = new Vector();
 		
 		long inicio = System.currentTimeMillis();
 		
@@ -39,7 +39,7 @@ public class TesteDeTempoDoContem {
 		 * LENTO
 		 * 
 		 */
-		Vetor vector = new Vetor();
+		Vector vector = new Vector();
 		
 		long inicio2 = System.currentTimeMillis();
 		

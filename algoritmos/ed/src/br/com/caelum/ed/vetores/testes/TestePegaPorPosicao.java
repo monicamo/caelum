@@ -1,6 +1,6 @@
 package br.com.caelum.ed.vetores.testes;
 
-import br.com.caelum.ed.vetores.Vetor;
+import br.com.caelum.ed.vetores.Vector;
 import br.com.mv.ed.Aluno;
 
 public class TestePegaPorPosicao {
@@ -13,7 +13,7 @@ public class TestePegaPorPosicao {
 		a1.setNome("Rafael");
 		a2.setNome("Paulo");
 		
-		Vetor lista = new Vetor();
+		Vector lista = new Vector();
 		
 		lista.adiciona(a1);
 		lista.adiciona(a2);
@@ -28,7 +28,7 @@ public class TestePegaPorPosicao {
 		
 		a1.setNome("Rafael");
 		
-		Vetor lista1 = new Vetor();
+		Vector lista1 = new Vector();
 		
 		lista1.adiciona(ad1);
 		lista1.pega(0);

@@ -1,6 +1,6 @@
 package br.com.caelum.ed.vetores.testes;
 
-import br.com.caelum.ed.vetores.Vetor;
+import br.com.caelum.ed.vetores.Vector;
 import br.com.mv.ed.Aluno;
 
 public class TesteAdicionaPorPosicao 
@@ -15,7 +15,7 @@ public class TesteAdicionaPorPosicao
 		a2.setNome("Paulo");
 		a3.setNome("Ana");
 		
-		Vetor lista = new Vetor();
+		Vector lista = new Vector();
 		
 		lista.adiciona(a1);
 		lista.adiciona(0, a2);

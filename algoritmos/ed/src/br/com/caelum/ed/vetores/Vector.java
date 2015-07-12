@@ -2,10 +2,10 @@ package br.com.caelum.ed.vetores;
 
 import br.com.mv.ed.Aluno;
 
-public class Vetor {
+public class Vector {
 
 	// Declarando e Inicializando um array de Aluno com capacidade 100.
-	private Aluno[] alunos = new Aluno[100000];
+	private Aluno[] alunos = new Aluno[10000];
 
 	private int totalDeAlunos = 0;
 
