@@ -1,6 +1,5 @@
 package br.com.mv.ed;
 
-import java.util.Arrays;
 
 public class Vetor {
 
